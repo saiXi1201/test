@@ -1,0 +1,31 @@
+{
+  "name": "iroha-prompt-studio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build && node scripts/export-prototype.mjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --import tsx src/domain.test.ts && node --import tsx src/importParser.test.ts",
+    "test:ui": "playwright test"
+  },
+  "dependencies": {
+    "jszip": "^3.10.2",
+    "lucide-react": "^0.468.0",
+    "mammoth": "^1.13.0",
+    "pdfjs-dist": "^6.5.438",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tsx": "^4.19.2",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.5"
+  }
+}
